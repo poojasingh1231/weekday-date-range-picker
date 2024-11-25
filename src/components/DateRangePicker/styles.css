@@ -1,0 +1,104 @@
+.date-range-picker-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+.date-range-picker {
+  position: relative;
+  font-family: Arial, sans-serif;
+  width: 500px;
+}
+
+.date-range-picker input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+}
+
+.date-range-picker .dropdown {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: #e0ecf6;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 20px;
+  width: 650px;
+}
+
+.calendars-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.divider {
+  width: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.predefined-ranges {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.predefined-ranges button {
+  background-color: #bbdefb;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.predefined-ranges button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.actions {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions button {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.actions button:hover {
+  background-color: #0056b3;
+}
+
+.selected {
+  background-color: #1565c0;
+  color: white;
+  border-radius: 50%;
+}
