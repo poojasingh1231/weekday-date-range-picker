@@ -11,9 +11,12 @@ const DateRangePicker: React.FC = () => {
     end?: Date;
   }>({});
   const [leftYear, setLeftYear] = useState(new Date().getFullYear());
-  const [rightYear, setRightYear] = useState(new Date().getFullYear());
   const [leftMonth, setLeftMonth] = useState(new Date().getMonth());
-  const [rightMonth, setRightMonth] = useState(new Date().getMonth() + 1);
+  const [rightYear, setRightYear] = useState(
+    new Date().getMonth() === 11 ? new Date().getFullYear() + 1 : new Date().getFullYear()
+  );
+  const [rightMonth, setRightMonth] = useState((new Date().getMonth() + 1) % 12);
+
 
   const handleSelectDate = (date: Date) => {
     if (!selectedDates.start || (selectedDates.start && selectedDates.end)) {
@@ -56,6 +59,7 @@ const DateRangePicker: React.FC = () => {
       setRightYear(m === 11 ? y + 1 : y);
     }
   };
+
 
   const handleRightCalendarMonthChange = (y: number, m: number) => {
     setRightMonth(m);
